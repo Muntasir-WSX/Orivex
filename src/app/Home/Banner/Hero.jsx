@@ -47,7 +47,7 @@ export default function Hero() {
               </motion.span>
             </AnimatePresence>
           </div>
-          <div className="h-25 md:h-[120px] lg:h-45 relative overflow-hidden mb-6">
+          <div className="h-25 md:h-30 lg:h-45 relative overflow-hidden mb-6">
             <AnimatePresence mode="wait">
               <motion.h1 
                 key={currentTextIndex}
@@ -91,7 +91,7 @@ export default function Hero() {
 
         
         <div className="relative hidden lg:flex justify-center lg:justify-end lg:col-span-5 h-full z-10 lg:pl-0">
-  <div className="relative w-full max-w-[450px] p-6 lg:min-w-[500px] lg:-ml-28">
+  <div className="relative w-full max-w-112.5 p-6 lg:min-w-125 lg:-ml-28">
     <div className="absolute inset-0 bg-[#454e8c] rounded-full shadow-[0_40px_100px_-20px_rgba(69,78,140,0.5)] z-0" />
     <div className="relative z-10 w-full h-full flex justify-center -mt-16 -mb-10 scale-150">
       <Image 

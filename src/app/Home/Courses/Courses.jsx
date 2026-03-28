@@ -19,7 +19,7 @@ export default function Courses() {
                     {courses.map(course => (
                         <div key={course._id} className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 flex flex-col">
                             <img src={course.image} alt={course.title} className="h-48 w-full object-cover" />
-                            <div className="p-5 flex-grow">
+                            <div className="p-5 grow">
                                 <span className="bg-[#2ECC71] text-white text-xs px-2 py-1 rounded">{course.category}</span>
                                 <h3 className="text-lg font-bold mt-3 text-[#00192F]">{course.title}</h3>
                                 <div className="flex items-center justify-between mt-4">
