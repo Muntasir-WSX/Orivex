@@ -61,22 +61,21 @@ export default function Testimonial() {
           <motion.div 
             className="flex gap-8"
             animate={{
-              x: [0, -1920], // স্লাইড এনিমেশন
+              x: [0, -1920], 
             }}
             transition={{
               x: {
                 repeat: Infinity,
                 repeatType: "loop",
-                duration: 30, // কত দ্রুত স্লাইড হবে
+                duration: 30, 
                 ease: "linear",
               },
             }}
           >
-            {/* ডাবল লুপ করা হয়েছে যাতে স্লাইডটি ইনফিনিট মনে হয় */}
             {[...testimonials, ...testimonials].map((item, index) => (
               <div 
                 key={index} 
-                className="min-w-[350px] md:min-w-[400px] bg-[#F8FAFF] p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow"
+                className="min-w-87.5 md:min-w-100 bg-[#F8FAFF] p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow"
               >
                 {/* Rating */}
                 <div className="flex gap-1 mb-6 text-[#FFC107]">
