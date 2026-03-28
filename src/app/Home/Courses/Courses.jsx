@@ -15,6 +15,7 @@ export default function Courses() {
         <section className="py-12 bg-gray-50">
             <div className="container mx-auto px-4">
                 <h2 className="text-3xl font-bold text-center mb-8 text-[#00192F]">Popular Courses</h2>
+                <p className="text-center text-gray-600 mb-8">Discover our most popular courses and start your learning journey today.</p>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     {courses.map(course => (
                         <div key={course._id} className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 flex flex-col">
@@ -30,9 +31,11 @@ export default function Courses() {
                                     </div>
                                 </div>
                             </div>
-                            <button className="w-full bg-[#00192F] text-white py-3 font-semibold hover:bg-[#002a4d] transition-colors">
-                                Enroll Now
-                            </button>
+                            <Link href={`/courses/${course._id}`}>
+    <button className="bg-[#CCFF00] text-[#131B33] font-bold py-3 rounded-xl hover:bg-[#d9ff33] transition-all duration-300 px-8 w-full">
+        Enroll Now
+    </button>
+</Link>
                         </div>
                     ))}
                 </div>

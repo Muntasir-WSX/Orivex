@@ -5,6 +5,7 @@ export const collectionsName = {
     usersCollection: 'users',
     coursesCollection: 'courses', 
     templateCollection: 'templates',
+    cartCollection: 'cart',
 };
 
 let db;

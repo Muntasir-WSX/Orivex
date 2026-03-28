@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { BookOpen } from 'lucide-react';
+import Link from 'next/link';
 
 export default function Hero() {
   const headerTexts = [
@@ -70,9 +71,11 @@ export default function Hero() {
             Build production-ready applications and jumpstart your career.
           </p>
 
-          <button className="bg-[#CCFF00] text-[#131B33] font-bold py-3 rounded-xl hover:bg-[#d9ff33] transition-all duration-300 px-8">
-            Explore Courses
-          </button>
+          <Link href="/courses">
+  <button className="bg-[#CCFF00] text-[#131B33] font-bold py-3 rounded-xl hover:bg-[#d9ff33] transition-all duration-300 px-8">
+    Explore Courses
+  </button>
+</Link>
 
           <div className="mt-14 flex items-center gap-6">
             <div className="flex -space-x-4">
