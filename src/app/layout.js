@@ -3,6 +3,7 @@ import "./globals.css";
 import NavBar from "@/Components/NavBar/NavBar";
 import AuthProvider from "@/AuthProvider/AuthProvider";
 import Footer from "@/Components/Footer/Footer";
+import { Toaster } from "react-hot-toast"; // ১. Toaster ইম্পোর্ট করুন
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,11 +34,25 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-    <body> 
+      <body> 
         <AuthProvider>
+          {/* ২. Toaster এখানে বসিয়ে দিন যাতে সব পেজ থেকে অ্যাক্সেস পাওয়া যায় */}
+          <Toaster 
+            position="top-center" 
+            reverseOrder={false} 
+            toastOptions={{
+              style: {
+                borderRadius: '16px',
+                background: '#131B33',
+                color: '#fff',
+                fontWeight: '600',
+              },
+            }}
+          />
+          
           <NavBar />
           <main>{children}</main>
-          <Footer></Footer>
+          <Footer />
         </AuthProvider>
       </body>
     </html>

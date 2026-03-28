@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'next/navigation';
+import Link from 'next/link';
 
 export default function TemplateDetails() {
     const { id } = useParams();
@@ -111,9 +112,23 @@ export default function TemplateDetails() {
 
         {/* Action Buttons - Fixed padding and shadow */}
         <div className="space-y-4">
-            <button className="w-full bg-[#CCFF00] text-[#131B33] font-black py-4 rounded-full hover:shadow-xl hover:scale-[1.02] transition-all duration-300 text-sm uppercase tracking-[0.15em]">
-                Buy This Template
-            </button>
+           <Link 
+    href={{
+        pathname: '/checkoutform',
+        query: { 
+            id: template._id, 
+            title: template.title, 
+            price: template.price, 
+            image: template.thumbnail, 
+            category: 'template' 
+        }
+    }}
+    className="block w-full"
+>
+    <button className="w-full bg-[#CCFF00] text-[#131B33] font-black py-4 rounded-full hover:shadow-xl hover:scale-[1.02] transition-all duration-300 text-sm uppercase tracking-[0.15em]">
+        Buy This Template
+    </button>
+</Link>
 
         </div>
     </div>

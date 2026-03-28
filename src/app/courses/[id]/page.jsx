@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'next/navigation';
+import Link from 'next/link';
 
 export default function CourseDetails() {
     const { id } = useParams();
@@ -89,9 +90,23 @@ export default function CourseDetails() {
                         </div>
 
                         {/* Buy Now Button with Requested Styles */}
-                        <button className="bg-[#CCFF00] text-[#131B33] font-bold py-4 rounded-xl hover:bg-[#d9ff33] transition-all duration-300 px-8 w-full text-lg shadow-sm">
-                            Buy This Course
-                        </button>
+                       <Link 
+    href={{
+        pathname: '/checkoutform',
+        query: { 
+            id: course._id, 
+            title: course.title, 
+            price: course.price, 
+            image: course.thumbnail, 
+            category: 'course' 
+        }
+    }}
+    className="block w-full"
+>
+    <button className="bg-[#CCFF00] text-[#131B33] font-bold py-4 rounded-xl hover:bg-[#d9ff33] transition-all duration-300 px-8 w-full text-lg shadow-sm">
+        Buy This Course
+    </button>
+</Link>
 
                         <p className="text-center text-xs text-gray-400 mt-4">
                             Full lifetime access • Money-back guarantee
