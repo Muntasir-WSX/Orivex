@@ -49,7 +49,7 @@ export default function Testimonial() {
       <div className="container mx-auto">
         {/* Headline & Subtitle */}
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <h4 className="text-[#a855f7] font-bold tracking-widest uppercase text-sm mb-3">Student & Customer Voices</h4>
+          <h4 className="text-[#6366f1] font-bold tracking-widest uppercase text-sm mb-3">Student & Customer Voices</h4>
           <h2 className="text-4xl md:text-5xl font-black text-[#131B33] mb-6">Real Stories From Our Community</h2>
           <p className="text-[#5E5E5E] text-lg leading-relaxed">
             Join thousands of successful developers and businesses who have transformed their digital journey with Orivex.
@@ -97,7 +97,7 @@ export default function Testimonial() {
                   </div>
                   <div>
                     <h5 className="text-[#131B33] font-bold text-lg leading-none mb-1">{item.name}</h5>
-                    <p className="text-[#a855f7] font-semibold text-sm uppercase tracking-tighter">{item.role}</p>
+                    <p className="text-[#6366f1] font-semibold text-sm uppercase tracking-tighter">{item.role}</p>
                   </div>
                 </div>
               </div>
