@@ -47,7 +47,7 @@ export default function Hero() {
               </motion.span>
             </AnimatePresence>
           </div>
-          <div className="h-[100px] md:h-[120px] lg:h-[180px] relative overflow-hidden mb-6">
+          <div className="h-25 md:h-[120px] lg:h-45 relative overflow-hidden mb-6">
             <AnimatePresence mode="wait">
               <motion.h1 
                 key={currentTextIndex}
@@ -70,7 +70,7 @@ export default function Hero() {
             Build production-ready applications and jumpstart your career.
           </p>
 
-          <button className="bg-[#CCFF00] text-[#131B33] px-10 py-4 md:px-12 md:py-5 rounded-full font-extrabold text-base md:text-lg hover:shadow-[0_10px_30px_rgba(204,255,0,0.4)] transition-all active:scale-95 border-2 border-[#CCFF00]">
+          <button className="bg-[#CCFF00] text-[#131B33] font-bold py-3 rounded-xl hover:bg-[#d9ff33] transition-all duration-300 px-8">
             Explore Courses
           </button>
 
@@ -91,7 +91,6 @@ export default function Hero() {
 
         
         <div className="relative hidden lg:flex justify-center lg:justify-end lg:col-span-5 h-full z-10 lg:pl-0">
-  {/* প্রধান কন্টেইনার - কোনো transition নেই, একদম সলিড লুক */}
   <div className="relative w-full max-w-[450px] p-6 lg:min-w-[500px] lg:-ml-28">
     <div className="absolute inset-0 bg-[#454e8c] rounded-full shadow-[0_40px_100px_-20px_rgba(69,78,140,0.5)] z-0" />
     <div className="relative z-10 w-full h-full flex justify-center -mt-16 -mb-10 scale-150">
